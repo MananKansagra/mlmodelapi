@@ -1,1 +1,9 @@
-pip freeze > requirements.txt
+fastapi==0.110.1
+uvicorn==0.29.0
+python-multipart==0.0.9
+pillow==10.2.0
+openai==1.14.2
+python-dotenv==1.0.1
+requests==2.31.0
+torch==2.2.1
+transformers==4.40.0
