@@ -35,7 +35,7 @@ def read_root():
 async def predict(file: UploadFile = File(...)):
     # Load and preprocess the uploaded image
     image = Image.open(io.BytesIO(await file.read())).convert("RGB")
-    inputs = processor(images=image, return_tensors="pt")
+    inputs = processor(images=[image], return_tensors="pt")
     outputs = model(**inputs)
 
     # Get predicted label and confidence
